@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+feedback.db
+mlflow.db
+mlruns/
+mlartifacts/
+.mlflow_cache/
+models/pipeline_full.joblib
+models/train_final.log

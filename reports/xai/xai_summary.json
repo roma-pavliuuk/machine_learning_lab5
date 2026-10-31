@@ -1,0 +1,47 @@
+{
+  "run_id": "a38a6e7c4aae4ad9919af5488243e3f6",
+  "model_version": "v2",
+  "threshold": 0.5,
+  "explainer": {
+    "type": "TreeExplainer",
+    "feature_perturbation": "interventional",
+    "background_rows": 300,
+    "model_output": "probability",
+    "lime_num_samples": 1000
+  },
+  "global_importance_mean_abs_shap": {
+    "checking_account_no account": 0.13240567450281618,
+    "credit_history_critical account": 0.05112973387206126,
+    "duration_div_age": 0.041060347113275504,
+    "savings_account_<100 DM": 0.02772572943741832,
+    "property_real estate": 0.0252985218667502,
+    "other_installment_plans_bank": 0.016581519918036105,
+    "employment_since": 0.014723376291670058,
+    "credit_amount_div_duration": 0.011422279121393188,
+    "property_unknown/none": 0.003322119413966053
+  },
+  "pdp": {
+    "checking_account_no account": {
+      "method": "PDP+ICE",
+      "max_abs_spearman": 0.18623833553009023,
+      "partner": "savings_account_<100 DM"
+    },
+    "credit_history_critical account": {
+      "method": "PDP+ICE",
+      "max_abs_spearman": 0.20928659792869883,
+      "partner": "duration_div_age"
+    }
+  },
+  "surrogate": {
+    "max_depth": 4,
+    "fidelity_r2_test": 0.9179702443122513
+  },
+  "stability": {
+    "n_objects": 30,
+    "n_perturbations": 20,
+    "n_valid": 580,
+    "mean_spearman_top5": 0.9932758620689653,
+    "sd": 0.03535597073742678,
+    "noise": "гаусів 1–5 % std для duration, credit_amount, age; обрізання до меж Field"
+  }
+}

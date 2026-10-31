@@ -1,0 +1,86 @@
+{
+  "selected_detector": "gmm",
+  "detectors": {
+    "projection": {
+      "n_components": 8,
+      "explained_variance": 0.9327153221590722,
+      "model_space_dim": 9
+    },
+    "kde": {
+      "bandwidth": 0.33598182862837817,
+      "grid": [
+        0.1,
+        10.0
+      ],
+      "cv_loglik": -816.1595138169098,
+      "threshold": -21.677408371538814,
+      "fallback_share_test": 0.03666666666666667,
+      "synthetic_ood_detected_share": 0.9466666666666667
+    },
+    "gmm": {
+      "n_components": 10,
+      "cv_loglik": {
+        "1": -11.424823327599327,
+        "2": -6.572849068161102,
+        "3": -4.592639428522268,
+        "4": -2.6284277102553837,
+        "5": -0.4623574495061041,
+        "6": 0.6290173481884359,
+        "7": 1.644587247587151,
+        "8": 2.616036753049667,
+        "9": 2.822679782659411,
+        "10": 3.2848789486186147
+      },
+      "edge": true,
+      "threshold": -10.243507991551722,
+      "fallback_share_test": 0.03666666666666667,
+      "synthetic_ood_detected_share": 1.0
+    }
+  },
+  "model_all_test": {
+    "n": 300,
+    "f1": 0.504297994269341,
+    "cost_total": 28650.0,
+    "cost_per_applicant": 95.5,
+    "roc_auc": 0.753941798941799
+  },
+  "model_non_fallback": {
+    "n": 289,
+    "f1": 0.5014925373134328,
+    "cost_total": 27750.0,
+    "cost_per_applicant": 96.02076124567473,
+    "roc_auc": 0.7584774888303356
+  },
+  "system_model_plus_rule": {
+    "n": 300,
+    "f1": 0.49853372434017595,
+    "cost_total": 32400.0,
+    "cost_per_applicant": 108.0
+  },
+  "fallback_share_test": 0.03666666666666667,
+  "n_fallback": 11,
+  "ood_subset_model_vs_rule": {
+    "n": 11,
+    "model": {
+      "n": 11,
+      "f1": 0.5714285714285714,
+      "cost_total": 900.0,
+      "cost_per_applicant": 81.81818181818181
+    },
+    "rule": {
+      "n": 11,
+      "f1": 0.3333333333333333,
+      "cost_total": 4650.0,
+      "cost_per_applicant": 422.72727272727275
+    },
+    "note": "висновків не робимо, якщо n < 10"
+  },
+  "rule_all_test": {
+    "n": 300,
+    "f1": 0.5685279187817259,
+    "cost_total": 58650.0,
+    "cost_per_applicant": 195.5
+  },
+  "ood_example_log_density": -21.377443970348725,
+  "threshold": -10.243507991551722
+}

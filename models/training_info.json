@@ -1,0 +1,179 @@
+{
+  "best_params": {
+    "filter__k": 40,
+    "resample__k_neighbors": 3,
+    "model__n_estimators": 484,
+    "model__max_depth": 4
+  },
+  "inner_auc": 0.737293363402521,
+  "threshold": 0.5,
+  "n_trials": 20,
+  "inner_cv": {
+    "n_splits": 3,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "oof_auc": 0.7335422740524782,
+  "trials": [
+    {
+      "number": 0,
+      "value": 0.6723825734094326,
+      "params_filter__k": 27,
+      "params_model__max_depth": 13,
+      "params_model__n_estimators": 393,
+      "params_resample__k_neighbors": 10
+    },
+    {
+      "number": 1,
+      "value": 0.673919344035684,
+      "params_filter__k": 23,
+      "params_model__max_depth": 18,
+      "params_model__n_estimators": 123,
+      "params_resample__k_neighbors": 4
+    },
+    {
+      "number": 2,
+      "value": 0.6829735897052222,
+      "params_filter__k": 32,
+      "params_model__max_depth": 20,
+      "params_model__n_estimators": 108,
+      "params_resample__k_neighbors": 8
+    },
+    {
+      "number": 3,
+      "value": 0.703378775571279,
+      "params_filter__k": 37,
+      "params_model__max_depth": 6,
+      "params_model__n_estimators": 172,
+      "params_resample__k_neighbors": 4
+    },
+    {
+      "number": 4,
+      "value": 0.6895066907505184,
+      "params_filter__k": 26,
+      "params_model__max_depth": 8,
+      "params_model__n_estimators": 273,
+      "params_resample__k_neighbors": 7
+    },
+    {
+      "number": 5,
+      "value": 0.6918947685313839,
+      "params_filter__k": 32,
+      "params_model__max_depth": 9,
+      "params_model__n_estimators": 217,
+      "params_resample__k_neighbors": 4
+    },
+    {
+      "number": 6,
+      "value": 0.6875086395473945,
+      "params_filter__k": 29,
+      "params_model__max_depth": 12,
+      "params_model__n_estimators": 180,
+      "params_resample__k_neighbors": 9
+    },
+    {
+      "number": 7,
+      "value": 0.7223234325901541,
+      "params_filter__k": 32,
+      "params_model__max_depth": 6,
+      "params_model__n_estimators": 343,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 8,
+      "value": 0.6795544665569354,
+      "params_filter__k": 21,
+      "params_model__max_depth": 17,
+      "params_model__n_estimators": 487,
+      "params_resample__k_neighbors": 10
+    },
+    {
+      "number": 9,
+      "value": 0.6837947920452035,
+      "params_filter__k": 26,
+      "params_model__max_depth": 10,
+      "params_model__n_estimators": 374,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 10,
+      "value": 0.7001714549354082,
+      "params_filter__k": 36,
+      "params_model__max_depth": 6,
+      "params_model__n_estimators": 423,
+      "params_resample__k_neighbors": 6
+    },
+    {
+      "number": 11,
+      "value": 0.7180699251120469,
+      "params_filter__k": 35,
+      "params_model__max_depth": 4,
+      "params_model__n_estimators": 107,
+      "params_resample__k_neighbors": 5
+    },
+    {
+      "number": 12,
+      "value": 0.7295825228190932,
+      "params_filter__k": 36,
+      "params_model__max_depth": 3,
+      "params_model__n_estimators": 315,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 13,
+      "value": 0.6715993138239883,
+      "params_filter__k": 37,
+      "params_model__max_depth": 10,
+      "params_model__n_estimators": 416,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 14,
+      "value": 0.7296119150937347,
+      "params_filter__k": 37,
+      "params_model__max_depth": 3,
+      "params_model__n_estimators": 325,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 15,
+      "value": 0.7301233406724953,
+      "params_filter__k": 39,
+      "params_model__max_depth": 3,
+      "params_model__n_estimators": 422,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 16,
+      "value": 0.737293363402521,
+      "params_filter__k": 40,
+      "params_model__max_depth": 4,
+      "params_model__n_estimators": 484,
+      "params_resample__k_neighbors": 3
+    },
+    {
+      "number": 17,
+      "value": 0.7327961672473867,
+      "params_filter__k": 40,
+      "params_model__max_depth": 5,
+      "params_model__n_estimators": 493,
+      "params_resample__k_neighbors": 4
+    },
+    {
+      "number": 18,
+      "value": 0.7125069472649153,
+      "params_filter__k": 39,
+      "params_model__max_depth": 5,
+      "params_model__n_estimators": 492,
+      "params_resample__k_neighbors": 4
+    },
+    {
+      "number": 19,
+      "value": 0.7335778236178506,
+      "params_filter__k": 33,
+      "params_model__max_depth": 4,
+      "params_model__n_estimators": 485,
+      "params_resample__k_neighbors": 4
+    }
+  ]
+}

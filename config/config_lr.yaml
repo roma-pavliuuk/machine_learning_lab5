@@ -1,0 +1,111 @@
+model_family: additive
+
+target: bad_credit
+
+features:
+  numeric_continuous: [duration, credit_amount, age]
+  numeric_discrete: [installment_rate, residence_since, existing_credits]
+  categorical_nominal:
+    - checking_account
+    - credit_history
+    - purpose
+    - savings_account
+    - other_debtors
+    - property
+    - other_installment_plans
+    - housing
+    - telephone
+  categorical_ordinal: [employment_since, job]
+
+protected_attributes: [sex, personal_status_sex, foreign_worker]
+
+imputation_policy:
+  numeric:
+    - {max_share: 0.10, strategy: median}
+    - {max_share: 0.40, strategy: median, add_indicator: true}
+    - {max_share: 1.00, strategy: constant, fill_value: 0, add_indicator: true}
+  categorical:
+    - {max_share: 0.10, strategy: most_frequent}
+    - {max_share: 1.00, strategy: constant, fill_value: "Missing"}
+
+imputation_routing:
+  numeric_continuous: numeric
+  numeric_discrete: numeric
+  categorical_nominal: categorical
+  categorical_ordinal: categorical
+
+ordinal_categories:
+  employment_since: [unemployed, "<1 year", "1-4 years", "4-7 years", ">=7 years"]
+  job:
+    - unemployed/unskilled non-resident
+    - unskilled resident
+    - skilled employee
+    - management/highly qualified
+
+transform_policy:
+  additive:
+    numeric_continuous:
+      - interactions: {ratios: [[credit_amount, duration], [duration, age]], epsilon: 1.0e-5}
+      - yeo_johnson: {standardize: true}
+    numeric_discrete: [standard_scaler]
+    categorical_nominal:
+      - oof_woe: {n_splits: 5, smoothing: 0.5, random_state: 42}
+    categorical_ordinal: [ordinal_encoder, standard_scaler]
+  partitioning:
+    numeric_continuous:
+      - interactions: {ratios: [[credit_amount, duration], [duration, age]], epsilon: 1.0e-5}
+      - winsorize: {lower_quantile: 0.01, upper_quantile: 0.99}
+    numeric_discrete: []
+    categorical_nominal: [one_hot]
+    categorical_ordinal: [ordinal_encoder]
+
+fairness:
+  attribute: sex
+  privileged: male
+
+selection:
+  basic: {threshold: 0.95, variance_tolerance: 1.0e-8}
+  filter: {score: f_classif, k: 30}
+  wrapper: {k_features: 15, forward: true, floating: false, scoring: roc_auc, cv: 3, random_state: 42}
+  embedded: {C: 0.1}
+
+wrapper_estimator:
+  additive: {class: logistic_regression, params: {max_iter: 1000}}
+
+
+  partitioning: {class: random_forest, params: {n_estimators: 50, max_depth: 6, random_state: 42, n_jobs: 1}}
+
+model:
+  additive: {class: logistic_regression, params: {max_iter: 1000, solver: liblinear}}
+  partitioning: {class: random_forest, params: {n_estimators: 200, random_state: 42, n_jobs: 1}}
+
+resampler:
+  name: smote
+  params: {k_neighbors: 5, random_state: 42}
+
+cv:
+  outer: {n_splits: 5, shuffle: true, random_state: 42}
+  inner: {n_splits: 3, shuffle: true, random_state: 42}
+
+search:
+  n_trials: 30
+  metric: roc_auc
+  seed: 42
+  space:
+    additive:
+      filter__k: {type: int, low: 20, high: 40}
+      resample__k_neighbors: {type: int, low: 3, high: 10}
+      model__C: {type: float, low: 1.0e-4, high: 100.0, log: true}
+      model__l1_ratio: {type: categorical, choices: [0.0, 1.0]}
+    partitioning:
+      filter__k: {type: int, low: 20, high: 40}
+      resample__k_neighbors: {type: int, low: 3, high: 10}
+      model__n_estimators: {type: int, low: 100, high: 500}
+      model__max_depth: {type: int, low: 3, high: 20}
+
+costs:
+  C00: 0
+  C01: 150
+  C10: 1500
+  C11: 0
+  threshold_grid: {start: 0.0, stop: 1.0, num: 201}

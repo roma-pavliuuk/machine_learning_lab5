@@ -1,0 +1,166 @@
+{
+  "run_id": "a38a6e7c4aae4ad9919af5488243e3f6",
+  "model_version": "v2",
+  "threshold": 0.5,
+  "attribute": "sex",
+  "privileged": "male",
+  "favourable_decision": "label = 0 (видати кредит)",
+  "system": {
+    "privileged": {
+      "n": 199,
+      "n_good": 144,
+      "grant_rate": 0.18090452261306533,
+      "tpr_good": 0.2152777777777778,
+      "sufficient_data": true
+    },
+    "unprivileged": {
+      "n": 101,
+      "n_good": 66,
+      "grant_rate": 0.12871287128712872,
+      "tpr_good": 0.19696969696969696,
+      "sufficient_data": true
+    },
+    "DPR": 0.7114961496149614,
+    "EOR": 0.9149560117302051,
+    "DPR_ci": [
+      0.3571010885927854,
+      1.1961314084703258
+    ],
+    "EOR_ci": [
+      0.46854996408332666,
+      1.5486705870355892
+    ],
+    "DPR_four_fifths": false,
+    "DPR_ci_contains_1": true
+  },
+  "model": {
+    "privileged": {
+      "n": 199,
+      "n_good": 144,
+      "grant_rate": 0.1507537688442211,
+      "tpr_good": 0.19444444444444445,
+      "sufficient_data": true
+    },
+    "unprivileged": {
+      "n": 101,
+      "n_good": 66,
+      "grant_rate": 0.10891089108910891,
+      "tpr_good": 0.16666666666666666,
+      "sufficient_data": true
+    },
+    "DPR": 0.7224422442244225,
+    "EOR": 0.8571428571428571,
+    "DPR_ci": [
+      0.31102139885630053,
+      1.2557768340530435
+    ],
+    "EOR_ci": [
+      0.3777285735529315,
+      1.4743266621438265
+    ],
+    "DPR_four_fifths": false,
+    "DPR_ci_contains_1": true
+  },
+  "rule": {
+    "privileged": {
+      "n": 199,
+      "n_good": 144,
+      "grant_rate": 0.678391959798995,
+      "tpr_good": 0.7847222222222222,
+      "sufficient_data": true
+    },
+    "unprivileged": {
+      "n": 101,
+      "n_good": 66,
+      "grant_rate": 0.5742574257425742,
+      "tpr_good": 0.696969696969697,
+      "sufficient_data": true
+    },
+    "DPR": 0.8464979831316464,
+    "EOR": 0.8881737731295254,
+    "DPR_ci": [
+      0.6898516479789281,
+      1.015182563338301
+    ],
+    "EOR_ci": [
+      0.7285546460006587,
+      1.0650678517823375
+    ],
+    "DPR_four_fifths": true,
+    "DPR_ci_contains_1": true
+  },
+  "positives_by_group": {
+    "female": 35,
+    "male": 55
+  },
+  "proxy_association_with_sex": {
+    "age": {
+      "metric": "|2·AUC−1|",
+      "value": 0.38160552897395006
+    },
+    "housing": {
+      "metric": "V Крамера",
+      "value": 0.25202837383561966
+    },
+    "employment_since": {
+      "metric": "V Крамера",
+      "value": 0.24018491029463343
+    },
+    "installment_rate": {
+      "metric": "V Крамера",
+      "value": 0.20802269408273763
+    },
+    "property": {
+      "metric": "V Крамера",
+      "value": 0.1506407955456193
+    },
+    "purpose": {
+      "metric": "V Крамера",
+      "value": 0.1479586195325366
+    },
+    "savings_account": {
+      "metric": "V Крамера",
+      "value": 0.1398864556385626
+    },
+    "existing_credits": {
+      "metric": "V Крамера",
+      "value": 0.13738275026982028
+    },
+    "job": {
+      "metric": "V Крамера",
+      "value": 0.12258254764881724
+    },
+    "other_installment_plans": {
+      "metric": "V Крамера",
+      "value": 0.11452287985827277
+    },
+    "credit_amount": {
+      "metric": "|2·AUC−1|",
+      "value": 0.10740831495548475
+    },
+    "duration": {
+      "metric": "|2·AUC−1|",
+      "value": 0.10682123488730788
+    },
+    "credit_history": {
+      "metric": "V Крамера",
+      "value": 0.09728739572381939
+    },
+    "checking_account": {
+      "metric": "V Крамера",
+      "value": 0.09478791516040527
+    },
+    "residence_since": {
+      "metric": "V Крамера",
+      "value": 0.09217325109427024
+    },
+    "telephone": {
+      "metric": "V Крамера",
+      "value": 0.08248489854880499
+    },
+    "other_debtors": {
+      "metric": "V Крамера",
+      "value": 0.03751039042607146
+    }
+  }
+}

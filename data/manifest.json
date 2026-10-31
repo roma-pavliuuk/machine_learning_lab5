@@ -1,0 +1,47 @@
+{
+  "source": {
+    "repo": "lab_03",
+    "path": "data/raw/lab2_feature_matrix.csv",
+    "md5": "c6cfcbbe784ee2407a235ddb309f9736",
+    "rev": null,
+    "note": "rev → git-тег після git init"
+  },
+  "split": {
+    "origin": "ЛР №2, train_test_split(test_size=0.3, stratify=y, random_state=42)",
+    "n_train": 700,
+    "n_test": 300,
+    "bad_share_train": 0.3,
+    "bad_share_test": 0.3
+  },
+  "columns": {
+    "features": [
+      "duration",
+      "credit_amount",
+      "age",
+      "installment_rate",
+      "residence_since",
+      "existing_credits",
+      "checking_account",
+      "credit_history",
+      "purpose",
+      "savings_account",
+      "other_debtors",
+      "property",
+      "other_installment_plans",
+      "housing",
+      "telephone",
+      "employment_since",
+      "job"
+    ],
+    "protected_for_audit_only": [
+      "sex",
+      "personal_status_sex",
+      "foreign_worker"
+    ],
+    "target": "bad_credit"
+  },
+  "md5": {
+    "train.csv": "53b76048387e786d95208f2fc9373b1a",
+    "test.csv": "1de68e6f9f6d5815df78a583028be39a"
+  }
+}

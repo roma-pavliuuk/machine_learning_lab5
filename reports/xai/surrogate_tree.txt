@@ -1,0 +1,46 @@
+|--- checking_account_no account <= 0.500
+|   |--- duration_div_age <= 0.191
+|   |   |--- duration_div_age <= 0.171
+|   |   |   |--- employment_since <= 4.500
+|   |   |   |   |--- value: [0.571]
+|   |   |   |--- employment_since >  4.500
+|   |   |   |   |--- value: [0.405]
+|   |   |--- duration_div_age >  0.171
+|   |   |   |--- credit_history_critical account <= 0.500
+|   |   |   |   |--- value: [0.806]
+|   |   |   |--- credit_history_critical account >  0.500
+|   |   |   |   |--- value: [0.651]
+|   |--- duration_div_age >  0.191
+|   |   |--- credit_history_critical account <= 0.500
+|   |   |   |--- property_real estate <= 0.500
+|   |   |   |   |--- value: [0.938]
+|   |   |   |--- property_real estate >  0.500
+|   |   |   |   |--- value: [0.867]
+|   |   |--- credit_history_critical account >  0.500
+|   |   |   |--- duration_div_age <= 0.447
+|   |   |   |   |--- value: [0.776]
+|   |   |   |--- duration_div_age >  0.447
+|   |   |   |   |--- value: [0.876]
+|--- checking_account_no account >  0.500
+|   |--- credit_history_critical account <= 0.500
+|   |   |--- duration_div_age <= 0.253
+|   |   |   |--- property_real estate <= 0.500
+|   |   |   |   |--- value: [0.549]
+|   |   |   |--- property_real estate >  0.500
+|   |   |   |   |--- value: [0.400]
+|   |   |--- duration_div_age >  0.253
+|   |   |   |--- other_installment_plans_bank <= 0.500
+|   |   |   |   |--- value: [0.644]
+|   |   |   |--- other_installment_plans_bank >  0.500
+|   |   |   |   |--- value: [0.781]
+|   |--- credit_history_critical account >  0.500
+|   |   |--- duration_div_age <= 0.320
+|   |   |   |--- employment_since <= 2.500
+|   |   |   |   |--- value: [0.390]
+|   |   |   |--- employment_since >  2.500
+|   |   |   |   |--- value: [0.303]
+|   |   |--- duration_div_age >  0.320
+|   |   |   |--- other_installment_plans_bank <= 0.500
+|   |   |   |   |--- value: [0.462]
+|   |   |   |--- other_installment_plans_bank >  0.500
+|   |   |   |   |--- value: [0.687]

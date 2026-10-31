@@ -1,0 +1,230 @@
+{
+  "run_id": "a38a6e7c4aae4ad9919af5488243e3f6",
+  "model_version": "v2",
+  "threshold": 0.5,
+  "overall": {
+    "n": 300,
+    "bad_share": 0.3,
+    "roc_auc": 0.753941798941799,
+    "f1": 0.504297994269341,
+    "ci": {
+      "roc_auc": [
+        0.6951392040506563,
+        0.8121384817940734
+      ],
+      "f1": [
+        0.4424453409682457,
+        0.562504352367688
+      ]
+    }
+  },
+  "segments": [
+    {
+      "id": 0,
+      "name": "Без майна, житло безкоштовне, довші кредити",
+      "n_test": 31,
+      "n_train": 89,
+      "bad_share": 0.3870967741935484,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.13890294017892185,
+        "credit_history_critical account": 0.05115712014547445,
+        "duration_div_age": 0.02566735992392447,
+        "savings_account_<100 DM": 0.024905681968433274,
+        "property_real estate": 0.017803207891876262
+      },
+      "roc_auc": 0.7719298245614035,
+      "f1": 0.5641025641025641,
+      "auc_diff_ci": [
+        -0.15753064490459187,
+        0.1769567031728775
+      ],
+      "limited_trust": false
+    },
+    {
+      "id": 1,
+      "name": "Є поточний рахунок, малі заощадження, нещодавно за адресою",
+      "n_test": 51,
+      "n_train": 101,
+      "bad_share": 0.5294117647058824,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.11324618982186793,
+        "credit_history_critical account": 0.031232988848355226,
+        "duration_div_age": 0.02839434057551319,
+        "savings_account_<100 DM": 0.022345551334140096,
+        "property_real estate": 0.017947239693698113
+      },
+      "roc_auc": 0.5825617283950618,
+      "f1": 0.6923076923076923,
+      "auc_diff_ci": [
+        -0.34554349350649777,
+        -0.02675658739289623
+      ],
+      "limited_trust": true
+    },
+    {
+      "id": 2,
+      "name": "Рахунок 0–200 DM, є заощадження, добра кредитна історія",
+      "n_test": 31,
+      "n_train": 68,
+      "bad_share": 0.41935483870967744,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.10365948447662683,
+        "credit_history_critical account": 0.03767068559643033,
+        "duration_div_age": 0.03165029632025522,
+        "savings_account_<100 DM": 0.043622906636098385,
+        "property_real estate": 0.03163965981372957
+      },
+      "roc_auc": 0.6153846153846154,
+      "f1": 0.6046511627906976,
+      "auc_diff_ci": [
+        -0.36527580146002864,
+        0.047638162440184505
+      ],
+      "limited_trust": false
+    },
+    {
+      "id": 3,
+      "name": "Кілька кредитів у банку, критична історія, але є заощадження",
+      "n_test": 26,
+      "n_train": 57,
+      "bad_share": 0.07692307692307693,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.1583662684252937,
+        "credit_history_critical account": 0.10061196006464833,
+        "duration_div_age": 0.04514858468939472,
+        "savings_account_<100 DM": 0.03988165426771863,
+        "property_real estate": 0.02030551688780225
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    },
+    {
+      "id": 4,
+      "name": "Інші розстрочки в банку (паралельні зобов'язання)",
+      "n_test": 40,
+      "n_train": 99,
+      "bad_share": 0.25,
+      "fallback_share": 0.225,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.10466266117274033,
+        "credit_history_critical account": 0.04644695503733358,
+        "duration_div_age": 0.04483397914902222,
+        "savings_account_<100 DM": 0.026594759440658432,
+        "property_real estate": 0.02127028434292394
+      },
+      "roc_auc": 0.5833333333333334,
+      "f1": 0.4166666666666667,
+      "auc_diff_ci": [
+        -0.4027578298739807,
+        0.04678182574977152
+      ],
+      "limited_trust": false
+    },
+    {
+      "id": 5,
+      "name": "Кілька кредитів, критична історія, без поточного рахунку",
+      "n_test": 17,
+      "n_train": 48,
+      "bad_share": 0.058823529411764705,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.19396525550704286,
+        "credit_history_critical account": 0.09793329205409214,
+        "duration_div_age": 0.050658551686702046,
+        "savings_account_<100 DM": 0.017758302478620917,
+        "property_real estate": 0.020680791769152752
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    },
+    {
+      "id": 6,
+      "name": "Без поточного рахунку, малі заощадження, нещодавно за адресою",
+      "n_test": 30,
+      "n_train": 64,
+      "bad_share": 0.23333333333333334,
+      "fallback_share": 0.06666666666666667,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.1601958587751102,
+        "credit_history_critical account": 0.04276104006939568,
+        "duration_div_age": 0.0486823731722535,
+        "savings_account_<100 DM": 0.015402541759816814,
+        "property_real estate": 0.03262339303214564
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    },
+    {
+      "id": 7,
+      "name": "Без поточного рахунку, є заощадження, стабільне проживання",
+      "n_test": 27,
+      "n_train": 65,
+      "bad_share": 0.1111111111111111,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.15245708317451778,
+        "credit_history_critical account": 0.0492564739264928,
+        "duration_div_age": 0.04119162894807053,
+        "savings_account_<100 DM": 0.028713743416866003,
+        "property_real estate": 0.024675991055632448
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    },
+    {
+      "id": 8,
+      "name": "Кілька кредитів, критична історія, є рахунок, малі заощадження",
+      "n_test": 23,
+      "n_train": 53,
+      "bad_share": 0.21739130434782608,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.1339108355854415,
+        "credit_history_critical account": 0.06674897409994877,
+        "duration_div_age": 0.06323326843060899,
+        "savings_account_<100 DM": 0.03201923912983662,
+        "property_real estate": 0.025049899104961842
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    },
+    {
+      "id": 9,
+      "name": "Власники нерухомості з малими заощадженнями",
+      "n_test": 24,
+      "n_train": 56,
+      "bad_share": 0.4166666666666667,
+      "fallback_share": 0.0,
+      "mean_abs_shap": {
+        "checking_account_no account": 0.1176294378579233,
+        "credit_history_critical account": 0.0294057592443101,
+        "duration_div_age": 0.051571555159720846,
+        "savings_account_<100 DM": 0.028221462945173498,
+        "property_real estate": 0.04958703895902899
+      },
+      "roc_auc": null,
+      "f1": null,
+      "note": "недостатньо даних (< 30 об'єктів або < 10 позитивних)",
+      "limited_trust": null
+    }
+  ],
+  "projection": {
+    "n_components": 8,
+    "explained_variance": 0.9327153221590722,
+    "model_space_dim": 9
+  }
+}

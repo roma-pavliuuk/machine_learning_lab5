@@ -1,0 +1,74 @@
+{
+  "run_id": "a38a6e7c4aae4ad9919af5488243e3f6",
+  "model_version": "v2",
+  "threshold": 0.5,
+  "currency": "DM (Deutsche Mark, 1994)",
+  "n_test": 300,
+  "cost_matrix_lab3": {
+    "C01_FP": 150,
+    "C10_FN": 1500
+  },
+  "assumptions": {
+    "C01": "втрачена чиста процентна маржа медіанного кредиту (2 320 DM × 4.5 % × 1.5 року), ЛР №3",
+    "C10": "LGD: середній кредит 3 271 DM × EAD 75 % × LGD 60 %, ЛР №3",
+    "scenarios": "песимістичний: C01 ×1.5, C10 ×0.6; оптимістичний: C01 ×0.7, C10 ×1.3"
+  },
+  "baseline": "Non-ML правило ЛР №1 на тому самому test",
+  "confusion": {
+    "system": {
+      "TP": 85,
+      "FP": 166,
+      "FN": 5,
+      "TN": 44
+    },
+    "rule": {
+      "TP": 56,
+      "FP": 51,
+      "FN": 34,
+      "TN": 159
+    },
+    "model": {
+      "TP": 88,
+      "FP": 171,
+      "FN": 2,
+      "TN": 39
+    }
+  },
+  "fallback_share": 0.03666666666666667,
+  "scenarios": {
+    "песимістичний": {
+      "costs": {
+        "C01": 225.0,
+        "C10": 900.0
+      },
+      "loss_rule": 42075.0,
+      "loss_system": 41850.0,
+      "effect": 225.0,
+      "effect_per_applicant": 0.75
+    },
+    "центральний": {
+      "costs": {
+        "C01": 150,
+        "C10": 1500
+      },
+      "loss_rule": 58650.0,
+      "loss_system": 32400.0,
+      "effect": 26250.0,
+      "effect_per_applicant": 87.5,
+      "effect_ci95": [
+        10650.0,
+        42153.75
+      ]
+    },
+    "оптимістичний": {
+      "costs": {
+        "C01": 105.0,
+        "C10": 1950.0
+      },
+      "loss_rule": 71655.0,
+      "loss_system": 27180.0,
+      "effect": 44475.0,
+      "effect_per_applicant": 148.25
+    }
+  }
+}

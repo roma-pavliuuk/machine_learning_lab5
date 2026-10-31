@@ -1,0 +1,433 @@
+{
+  "selected": "gmm",
+  "report": {
+    "projection": {
+      "n_components": 8,
+      "explained_variance": 0.9327153221590722,
+      "model_space_dim": 9
+    },
+    "kde": {
+      "bandwidth": 0.33598182862837817,
+      "grid": [
+        0.1,
+        10.0
+      ],
+      "cv_loglik": -816.1595138169098,
+      "threshold": -21.677408371538814,
+      "fallback_share_test": 0.03666666666666667,
+      "synthetic_ood_detected_share": 0.9466666666666667
+    },
+    "gmm": {
+      "n_components": 10,
+      "cv_loglik": {
+        "1": -11.424823327599327,
+        "2": -6.572849068161102,
+        "3": -4.592639428522268,
+        "4": -2.6284277102553837,
+        "5": -0.4623574495061041,
+        "6": 0.6290173481884359,
+        "7": 1.644587247587151,
+        "8": 2.616036753049667,
+        "9": 2.822679782659411,
+        "10": 3.2848789486186147
+      },
+      "edge": true,
+      "threshold": -10.243507991551722,
+      "fallback_share_test": 0.03666666666666667,
+      "synthetic_ood_detected_share": 1.0
+    }
+  },
+  "rule": {
+    "checking": "<0 DM",
+    "duration_gt": 24,
+    "savings": "<100 DM"
+  },
+  "segments": {
+    "n_components": 10,
+    "bic": -3998.860505422543,
+    "sizes_train": {
+      "0": 89,
+      "1": 101,
+      "2": 68,
+      "3": 57,
+      "4": 99,
+      "5": 48,
+      "6": 64,
+      "7": 65,
+      "8": 53,
+      "9": 56
+    },
+    "profiles": {
+      "0": [
+        {
+          "feature": "property=unknown/none",
+          "kind": "share",
+          "value": 0.8414285714285714,
+          "segment": 1.0,
+          "global": 0.15857142857142856
+        },
+        {
+          "feature": "housing=for free",
+          "kind": "share",
+          "value": 0.5445425361155699,
+          "segment": 0.651685393258427,
+          "global": 0.10714285714285714
+        },
+        {
+          "feature": "housing=own",
+          "kind": "share",
+          "value": -0.5036597110754415,
+          "segment": 0.21348314606741572,
+          "global": 0.7171428571428572
+        },
+        {
+          "feature": "duration",
+          "kind": "z",
+          "value": 0.5,
+          "segment": 24.0,
+          "global": 18.0
+        },
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": 0.5,
+          "segment": 4.0,
+          "global": 3.0
+        }
+      ],
+      "1": [
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": -0.5,
+          "segment": 2.0,
+          "global": 3.0
+        },
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": -0.3942857142857143,
+          "segment": 0.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": 0.3608910891089109,
+          "segment": 0.9108910891089109,
+          "global": 0.55
+        },
+        {
+          "feature": "credit_history=existing paid duly",
+          "kind": "share",
+          "value": 0.2947383309759548,
+          "segment": 0.8118811881188119,
+          "global": 0.5171428571428571
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": -0.29285714285714287,
+          "segment": 0.0,
+          "global": 0.29285714285714287
+        }
+      ],
+      "2": [
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": -0.55,
+          "segment": 0.0,
+          "global": 0.55
+        },
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": -0.5,
+          "segment": 2.0,
+          "global": 3.0
+        },
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": -0.3942857142857143,
+          "segment": 0.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "checking_account=0-200 DM",
+          "kind": "share",
+          "value": 0.33436974789915963,
+          "segment": 0.6029411764705882,
+          "global": 0.26857142857142857
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": -0.29285714285714287,
+          "segment": 0.0,
+          "global": 0.29285714285714287
+        }
+      ],
+      "3": [
+        {
+          "feature": "existing_credits",
+          "kind": "z",
+          "value": 1.0,
+          "segment": 2.0,
+          "global": 1.0
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": 0.7071428571428571,
+          "segment": 1.0,
+          "global": 0.29285714285714287
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": -0.55,
+          "segment": 0.0,
+          "global": 0.55
+        },
+        {
+          "feature": "credit_history=existing paid duly",
+          "kind": "share",
+          "value": -0.5171428571428571,
+          "segment": 0.0,
+          "global": 0.5171428571428571
+        },
+        {
+          "feature": "installment_rate",
+          "kind": "z",
+          "value": 0.5,
+          "segment": 4.0,
+          "global": 3.0
+        }
+      ],
+      "4": [
+        {
+          "feature": "other_installment_plans=bank",
+          "kind": "share",
+          "value": 0.8585714285714285,
+          "segment": 1.0,
+          "global": 0.14142857142857143
+        },
+        {
+          "feature": "other_installment_plans=none",
+          "kind": "share",
+          "value": -0.8042857142857143,
+          "segment": 0.0,
+          "global": 0.8042857142857143
+        },
+        {
+          "feature": "duration",
+          "kind": "z",
+          "value": 0.16666666666666666,
+          "segment": 20.0,
+          "global": 18.0
+        },
+        {
+          "feature": "credit_history=all paid at this bank",
+          "kind": "share",
+          "value": 0.1376334776334776,
+          "segment": 0.1919191919191919,
+          "global": 0.054285714285714284
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": -0.11103896103896105,
+          "segment": 0.18181818181818182,
+          "global": 0.29285714285714287
+        }
+      ],
+      "5": [
+        {
+          "feature": "existing_credits",
+          "kind": "z",
+          "value": 1.0,
+          "segment": 2.0,
+          "global": 1.0
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": 0.7071428571428571,
+          "segment": 1.0,
+          "global": 0.29285714285714287
+        },
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": 0.6057142857142856,
+          "segment": 1.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "credit_history=existing paid duly",
+          "kind": "share",
+          "value": -0.5171428571428571,
+          "segment": 0.0,
+          "global": 0.5171428571428571
+        },
+        {
+          "feature": "installment_rate",
+          "kind": "z",
+          "value": 0.5,
+          "segment": 4.0,
+          "global": 3.0
+        }
+      ],
+      "6": [
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": 0.6057142857142856,
+          "segment": 1.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": -0.5,
+          "segment": 2.0,
+          "global": 3.0
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": 0.29374999999999996,
+          "segment": 0.84375,
+          "global": 0.55
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": -0.29285714285714287,
+          "segment": 0.0,
+          "global": 0.29285714285714287
+        },
+        {
+          "feature": "checking_account=<0 DM",
+          "kind": "share",
+          "value": -0.2742857142857143,
+          "segment": 0.0,
+          "global": 0.2742857142857143
+        }
+      ],
+      "7": [
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": 0.6057142857142856,
+          "segment": 1.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": -0.55,
+          "segment": 0.0,
+          "global": 0.55
+        },
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": 0.5,
+          "segment": 4.0,
+          "global": 3.0
+        },
+        {
+          "feature": "credit_history=existing paid duly",
+          "kind": "share",
+          "value": 0.3136263736263737,
+          "segment": 0.8307692307692308,
+          "global": 0.5171428571428571
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": -0.29285714285714287,
+          "segment": 0.0,
+          "global": 0.29285714285714287
+        }
+      ],
+      "8": [
+        {
+          "feature": "existing_credits",
+          "kind": "z",
+          "value": 1.0,
+          "segment": 2.0,
+          "global": 1.0
+        },
+        {
+          "feature": "credit_history=critical account",
+          "kind": "share",
+          "value": 0.7071428571428571,
+          "segment": 1.0,
+          "global": 0.29285714285714287
+        },
+        {
+          "feature": "credit_history=existing paid duly",
+          "kind": "share",
+          "value": -0.5171428571428571,
+          "segment": 0.0,
+          "global": 0.5171428571428571
+        },
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": -0.33768194070080865,
+          "segment": 0.05660377358490566,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": 0.3179245283018868,
+          "segment": 0.8679245283018868,
+          "global": 0.55
+        }
+      ],
+      "9": [
+        {
+          "feature": "property=real estate",
+          "kind": "share",
+          "value": 0.7157142857142857,
+          "segment": 1.0,
+          "global": 0.2842857142857143
+        },
+        {
+          "feature": "residence_since",
+          "kind": "z",
+          "value": -0.5,
+          "segment": 2.0,
+          "global": 3.0
+        },
+        {
+          "feature": "savings_account=<100 DM",
+          "kind": "share",
+          "value": 0.41428571428571426,
+          "segment": 0.9642857142857143,
+          "global": 0.55
+        },
+        {
+          "feature": "checking_account=no account",
+          "kind": "share",
+          "value": -0.3942857142857143,
+          "segment": 0.0,
+          "global": 0.3942857142857143
+        },
+        {
+          "feature": "property=car or other",
+          "kind": "share",
+          "value": -0.33,
+          "segment": 0.0,
+          "global": 0.33
+        }
+      ]
+    }
+  }
+}

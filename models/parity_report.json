@@ -1,0 +1,12 @@
+{
+  "n_test": 300,
+  "max_abs_diff": 1.3929849551619355e-07,
+  "atol": 0.0001,
+  "threshold": 0.5,
+  "n_label_changed": 0,
+  "label_changed_rows": [],
+  "rows_within_atol_of_threshold": [],
+  "n_input_features": 52,
+  "n_selected_after_sfs": 15,
+  "n_final_features": 9
+}

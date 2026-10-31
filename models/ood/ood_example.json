@@ -1,0 +1,19 @@
+{
+  "duration": 6,
+  "credit_amount": 50000.0,
+  "age": 100,
+  "installment_rate": 1,
+  "residence_since": 4,
+  "existing_credits": 10,
+  "checking_account": "<0 DM",
+  "credit_history": "critical account",
+  "purpose": "retraining",
+  "savings_account": "unknown/none",
+  "other_debtors": "co-applicant",
+  "property": "unknown/none",
+  "other_installment_plans": "bank",
+  "housing": "rent",
+  "telephone": "yes",
+  "employment_since": "unemployed",
+  "job": "management/highly qualified"
+}
